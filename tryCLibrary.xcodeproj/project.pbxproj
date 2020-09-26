@@ -6,8 +6,31 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A7B6231F251F4B0D0081213E /* point.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B6231D251F4B0D0081213E /* point.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7B62320251F4B0D0081213E /* point.c in Sources */ = {isa = PBXBuildFile; fileRef = A7B6231E251F4B0D0081213E /* point.c */; };
+		A7B62343251F4BC80081213E /* libtryCLibrary.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62315251F4AFC0081213E /* libtryCLibrary.dylib */; };
+		A7B6234C251F4BE40081213E /* tryCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B6234B251F4BE40081213E /* tryCTests.m */; };
+		A7B62354251F4BEE0081213E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7B62353251F4BEE0081213E /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7B62344251F4BC80081213E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7B6230D251F4AFC0081213E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7B62314251F4AFC0081213E;
+			remoteInfo = tryCLibrary;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A7B62315251F4AFC0081213E /* libtryCLibrary.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtryCLibrary.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B6231D251F4B0D0081213E /* point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
+		A7B6231E251F4B0D0081213E /* point.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = point.c; sourceTree = "<group>"; };
+		A7B6233E251F4BC80081213E /* tryCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tryCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B6234B251F4BE40081213E /* tryCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tryCTests.m; sourceTree = "<group>"; };
+		A7B62353251F4BEE0081213E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -18,12 +41,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7B6233B251F4BC80081213E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B62343251F4BC80081213E /* libtryCLibrary.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A7B6230C251F4AFC0081213E = {
 			isa = PBXGroup;
 			children = (
+				A7B62333251F4B780081213E /* public */,
+				A7B6231E251F4B0D0081213E /* point.c */,
+				A7B6233F251F4BC80081213E /* tryCTests */,
 				A7B62316251F4AFC0081213E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -32,8 +66,26 @@
 			isa = PBXGroup;
 			children = (
 				A7B62315251F4AFC0081213E /* libtryCLibrary.dylib */,
+				A7B6233E251F4BC80081213E /* tryCTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A7B62333251F4B780081213E /* public */ = {
+			isa = PBXGroup;
+			children = (
+				A7B6231D251F4B0D0081213E /* point.h */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		A7B6233F251F4BC80081213E /* tryCTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7B6234B251F4BE40081213E /* tryCTests.m */,
+				A7B62353251F4BEE0081213E /* Info.plist */,
+			);
+			path = tryCTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -43,6 +95,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B6231F251F4B0D0081213E /* point.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,15 +119,37 @@
 			productReference = A7B62315251F4AFC0081213E /* libtryCLibrary.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		A7B6233D251F4BC80081213E /* tryCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B62346251F4BC80081213E /* Build configuration list for PBXNativeTarget "tryCTests" */;
+			buildPhases = (
+				A7B6233A251F4BC80081213E /* Sources */,
+				A7B6233B251F4BC80081213E /* Frameworks */,
+				A7B6233C251F4BC80081213E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7B62345251F4BC80081213E /* PBXTargetDependency */,
+			);
+			name = tryCTests;
+			productName = tryCTests;
+			productReference = A7B6233E251F4BC80081213E /* tryCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		A7B6230D251F4AFC0081213E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					A7B62314251F4AFC0081213E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					A7B6233D251F4BC80081213E = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -93,19 +168,48 @@
 			projectRoot = "";
 			targets = (
 				A7B62314251F4AFC0081213E /* tryCLibrary */,
+				A7B6233D251F4BC80081213E /* tryCTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7B6233C251F4BC80081213E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B62354251F4BEE0081213E /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7B62312251F4AFC0081213E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B62320251F4B0D0081213E /* point.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7B6233A251F4BC80081213E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B6234C251F4BE40081213E /* tryCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7B62345251F4BC80081213E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7B62314251F4AFC0081213E /* tryCLibrary */;
+			targetProxy = A7B62344251F4BC80081213E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A7B62317251F4AFC0081213E /* Debug */ = {
@@ -245,6 +349,40 @@
 			};
 			name = Release;
 		};
+		A7B62347251F4BC80081213E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AMPL46LPV;
+				INFOPLIST_FILE = tryCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.tryCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7B62348251F4BC80081213E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3AMPL46LPV;
+				INFOPLIST_FILE = tryCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytyubox.tryCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -262,6 +400,15 @@
 			buildConfigurations = (
 				A7B6231A251F4AFC0081213E /* Debug */,
 				A7B6231B251F4AFC0081213E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7B62346251F4BC80081213E /* Build configuration list for PBXNativeTarget "tryCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B62347251F4BC80081213E /* Debug */,
+				A7B62348251F4BC80081213E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
